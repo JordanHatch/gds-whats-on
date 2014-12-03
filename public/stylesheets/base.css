@@ -1,0 +1,48 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+header {
+  background: #fff;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+header h1 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+header h1 span {
+  display: inline-block;
+  background: #2b8cc4;
+  color: #fff;
+  width: auto;
+  margin-right: 20px;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  padding-top: 26px;
+}
+
+header .indicator {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url('/images/indicator.gif') no-repeat center center;
+}

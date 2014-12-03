@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <script type="text/javascript" src="/javascripts/vendor/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/moment.min.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/moment-timezone.min.js"></script>
+  <script type="text/javascript" src="/javascripts/vendor/moment-timezone-data.js"></script>
+
+  <script type="text/javascript" src="/javascripts/whats-on.js"></script>
+
+  <link href="/stylesheets/application.css" rel="stylesheet" media="all" type="text/css" />
+
+  <title>What's On at GDS</title>
+</head>
+<body>
+
+  <header>
+    <h1>
+      <span>GDS</span>
+      What's on this week
+    </h1>
+    <div class="indicator"></div>
+  </header>
+
+  <ul class="events">
+    <li class="event placeholder">
+      <h1></h1>
+
+      <ul class="information">
+        <li class="datetime"></li>
+        <li class="location"></li>
+        <li class="duration"></li>
+      </ul>
+    </li>
+  </ul>
+
+  <script type="text/javascript">
+    $(function(){
+      new WhatsOn({
+        el: $('ul.events'),
+        indicator: $('.indicator')
+      })
+    });
+  </script>
+</body>
+</html>
