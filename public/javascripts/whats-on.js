@@ -4,13 +4,17 @@
   function WhatsOn(options) {
     this.$el = options.el;
     this.$indicator = options.indicator;
+    this.$statusMessage = options.statusMessage;
+
     this.refreshInterval = 30000;
 
-    this.$indicator.hide();
     this.init();
   }
 
   WhatsOn.prototype.init = function init() {
+    this.$indicator.hide();
+    this.clearStatusMessage();
+
     this.fetchEvents();
   }
 
@@ -36,6 +40,11 @@
 
   WhatsOn.prototype.buildEventsList = function buildEventsList(events) {
     this.$el.find('li.event:not(.placeholder)').remove();
+    this.clearStatusMessage();
+
+    if (events.length == 0) {
+      this.setStatusMessage("We don't have any events in the calendar at the moment.");
+    }
 
     $.each(events, $.proxy(function(i, event){
       var $event = this.buildEvent(event);
@@ -105,6 +114,14 @@
     var durationInMinutes = tzEnd.diff(tzStart, 'minutes');
 
     return durationInMinutes + ' mins';
+  }
+
+  WhatsOn.prototype.clearStatusMessage = function clearStatusMessage() {
+    this.$statusMessage.text('').hide();
+  }
+
+  WhatsOn.prototype.setStatusMessage = function setStatusMessage(message) {
+    this.$statusMessage.text(message).show();
   }
 
   window.WhatsOn = WhatsOn;

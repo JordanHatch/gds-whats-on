@@ -19,6 +19,8 @@
     <div class="indicator"></div>
   </header>
 
+  <div class="status"></div>
+
   <ul class="events">
     <li class="event placeholder">
       <h1></h1>
@@ -35,7 +37,8 @@
     $(function(){
       new WhatsOn({
         el: $('ul.events'),
-        indicator: $('.indicator')
+        indicator: $('.indicator'),
+        statusMessage: $('.status')
       })
     });
   </script>

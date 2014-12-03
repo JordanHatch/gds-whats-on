@@ -35,3 +35,12 @@ header .indicator {
   height: 80px;
   background: url('/images/indicator.gif') no-repeat center center;
 }
+
+.status {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 40px auto;
+  text-align: center;
+  width: 80%;
+}
