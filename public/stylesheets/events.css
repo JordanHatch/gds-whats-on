@@ -37,11 +37,12 @@
   border-left: 4px solid #77d539;
 }
 .event.today h1 {
-  font-size: 36px;
-  margin: 13px 0;
+  font-size: 38px;
+  font-weight: bold;
+  margin: 13px 0 0;
 }
 .event.today .information {
-  margin: 13px 0;
+  margin: 8px 0 13px;
 }
 .event.today .information li {
   font-size: 20px;

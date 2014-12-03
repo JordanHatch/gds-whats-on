@@ -8,7 +8,7 @@ body {
   background: #000;
   color: #fff;
 
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Frutiger LT Std", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -21,20 +21,9 @@ header {
 
 header h1 {
   color: #000;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 300;
-}
-
-header h1 span {
-  display: inline-block;
-  background: #2b8cc4;
-  color: #fff;
-  width: auto;
-  margin-right: 20px;
-  width: 100px;
-  height: 80px;
-  text-align: center;
-  padding-top: 26px;
+  padding: 25px 15px;
 }
 
 header .indicator {
